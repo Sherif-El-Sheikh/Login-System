@@ -1,0 +1,383 @@
+body {
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+::-moz-selection {
+    color: #352e28;
+    background-color: #fec260;
+}
+
+::selection {
+    color: #352e28;
+    background-color: #fec260;
+}
+
+a {
+    color: black;
+}
+.navbar h6 {
+    font-family: "Bree Serif", serif;
+}
+.navbar {
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 0;
+}
+.bg-light {
+    background-color: transparent !important;
+}
+main {
+    /* background-color: #f7ecde; */
+    background-color: #c9d6ff;
+    min-height: 100vh;
+}
+
+main h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 50px;
+    color: #352e28;
+    position: relative;
+    isolation: isolate;
+}
+/* The isolation CSS property determines whether an element must create a new stacking context. */
+/* Stacking context refers to how elements on a webpage appear to sit on top of other elements,
+just as you can arrange index cards on your desk to lie side-by-side or overlap each other */
+/* especially helpful when used in conjunction with mix-blend-mode and z-index */
+/* isolate
+A new stacking context must be created. */
+
+main h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: #fec260;
+    -webkit-transition: height 0.35s;
+    -o-transition: height 0.35s;
+    transition: height 0.35s;
+    z-index: -1;
+}
+
+main h1:hover::before {
+    height: 50%;
+}
+
+.bookmark-body {
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: #352e28;
+}
+
+.bookmark-body h2 {
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-image: -o-linear-gradient(left, #3ca55c, #b5ac49);
+    background-image: -webkit-gradient(linear, left top, right top, from(#3ca55c), to(#b5ac49));
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* The background-clip property defines how far the background (color or image) should extend within an element. */
+/* text
+The background is painted within (clipped to) the foreground text. */
+/* The -webkit-text-fill-color CSS property specifies the fill color of characters of text.
+If this property is not set, the value of the color property is used. */
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #d99c39;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.25rem #fec26055;
+            box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.btn-submit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d1512d;
+    --bs-btn-border-color: #d1512d;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #bb4120;
+    --bs-btn-hover-border-color: #a03315;
+
+}
+.btn-logout {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #594bec;
+    --bs-btn-border-color: #594bec;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #594bec;
+    --bs-btn-hover-border-color: #594bec;
+}
+button.btn-logout {
+    --bs-btn-padding-y: 0.2rem !important;
+}
+#btnDeleteAccount {
+    --bs-btn-padding-y: 0.2rem !important;
+}
+
+@media (max-width: 576px) {
+    button.btn-logout {
+        --bs-btn-padding-y: 0.1rem !important;
+        --bs-btn-padding-x: 0.5rem !important;
+    }
+}
+
+.btn-reset {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #b5ac49;
+    --bs-btn-border-color: #b5ac49;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #9c943d;
+    --bs-btn-hover-border-color: #9c943d;
+}
+
+table {
+    vertical-align: middle !important;
+}
+@media (max-width: 767px) {
+    .table>:not(caption)>*>* {
+        padding: 0.4rem;
+    }
+}
+@media (max-width: 576px) {
+    .px-sm-5 {
+        padding-right: 2rem!important;
+        padding-left: 2rem!important;
+    }
+    .table>:not(caption)>*>* {
+        padding: 0.3rem;
+        font-size: 14px;
+    }
+    tbody td button.btn-visit, button.btn-update, button.btn-delete, button.btn-logout {
+        --bs-btn-font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    .px-sm-5 {
+        padding-right: 25px!important;
+        padding-left: 25px!important;
+    }
+    .table>:not(caption)>*>* {
+        padding: 0.1rem;
+        font-size: 11px;
+    }
+    tbody td button.btn-visit, button.btn-update, button.btn-delete, button.btn-logout {
+        --bs-btn-font-size: 11px;
+    }
+}
+.btn-visit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #9eb23b;
+    --bs-btn-border-color: #9eb23b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8a9e23;
+    --bs-btn-hover-border-color: #6e8018;
+}
+
+
+.btn-update {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #e4b835;
+    --bs-btn-border-color: #e4b835;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #cfa11a;
+    --bs-btn-hover-border-color: #cfa11a;
+}
+
+.btn-delete {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #eb1d36;
+    --bs-btn-border-color: #eb1d36;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #d30820;
+    --bs-btn-hover-border-color: #ba081d;
+}
+
+.alert-box, .box-success, .box-update {
+    background-color: #0007;
+}
+
+.box-success, .box-update {
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.box-conent{
+    width: 500px;
+    z-index: 10;
+}
+@media(min-width: 567px) {
+    .update-content {
+        width: 400px;
+        z-index: 10;
+    }
+}
+
+@media(min-width: 567px) {
+    .box-success .success-content {
+        width: 500px;
+        z-index: 10;
+    }
+}
+
+@media (max-width: 767px) {
+    .box-info {
+        width: 90% !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        text-align: center;
+    }
+}
+.fs-1 {
+    font-size: calc(1.8rem + 1.5vw)!important;
+}
+
+@media (min-width: 1200px) {
+    .fs-1 {
+        font-size: 3.5rem !important;
+    }
+}
+
+.box-conent p {
+    font-family: "Bree Serif", serif;
+    font-size: 21px;
+    line-height: 1.3;
+    color: #352e28;
+}
+.box-header p {
+    font-family: "Bree Serif", serif;
+    font-size: 21px;
+    line-height: 1.3;
+    color: #352e28;
+}
+.rules li {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.rules i {
+    color: #bb4120;
+}
+
+.success {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    -webkit-animation: ring 0.6s linear ;
+            animation: ring 0.6s linear ;
+}
+@media (min-width: 1200px) {
+    .success {
+        width: 80px;
+        height: 80px;
+    }
+}
+@-webkit-keyframes ring {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        -webkit-box-shadow: 1px 5px 2px #a5dc86;
+                box-shadow: 1px 5px 2px #a5dc86;
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+        -webkit-box-shadow: 1px 5px 2px #a5dc86;
+                box-shadow: 1px 5px 2px #a5dc86;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+        -webkit-box-shadow: 1px 5px 2px #a5dc86;
+                box-shadow: 1px 5px 2px #a5dc86;
+    }
+}
+@keyframes ring {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        -webkit-box-shadow: 1px 5px 2px #a5dc86;
+                box-shadow: 1px 5px 2px #a5dc86;
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+        -webkit-box-shadow: 1px 5px 2px #a5dc86;
+                box-shadow: 1px 5px 2px #a5dc86;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+        -webkit-box-shadow: 1px 5px 2px #a5dc86;
+                box-shadow: 1px 5px 2px #a5dc86;
+    }
+}
+.success::before {
+    content: '';
+    position: absolute;
+    top: 56%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 5px #a5dc86;
+            box-shadow: 0 0 5px #a5dc86;
+}
+.box-update i, .box-success i {
+    color: #a5dc86;
+    padding: 20px;
+    -webkit-animation: ico 0.8s linear ;
+            animation: ico 0.8s linear ;
+}
+
+@-webkit-keyframes ico {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+}
+
+@keyframes ico {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+}
+
+
+.highlight {
+    background-color: yellow;
+    color: black;
+}
+.highlight {
+    padding: 2px;
+    margin: 2px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    http-equiv="Permissions-Policy"
+    content='fullscreen=(self "https://example.com" "https://another.example.com"), geolocation=*, camera=()'/>
+    <title>Forgotten Password</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="Assets/img/icons8-user-50.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awsome Library -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body >
+    <main class="d-flex justify-content-center align-items-center flex-column vh-100">
+        <div class="container card" id="main">
+            <div class="sign-up">
+                <div class="form my-sm-4 d-flex justify-content-center align-items-center flex-column">
+                    <h1 class="text-center my-4">Find Your Account</h1>
+                    <span>Please enter your email address</span>
+                    <input id="searchEmail" type="email" class="form-control mt-5" placeholder="Enter your email address" name="reg-email">
+                    <div id="searchAlert" class="my-2"></div>
+                    <input id="searchPassword" type="password" class="form-control my-3 d-none" placeholder="New Password" name="reg-pass">
+                    <div id="searchPassAlert" class="text-center"></div>
+                    <button id="btnSearch" class="btn btn-system">Search</button>
+                    <button id="btnContinue" class="btn btn-system d-none">Continue</button>
+                </div>
+
+                <div class="toggle-container">
+                    <div class="toggle">
+                        <div class="toggle-panel toggle-left">
+                            <p>Search for your account</p>
+                            <p class="m-0">or</p>
+                            <button id="btnSignIn" class="hidden btn-toggle btn btn-system">Sign In</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    
+    <script src="Js/sweetalert2.all.min.js"></script>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/main.js"></script>
+</body>
+</html>

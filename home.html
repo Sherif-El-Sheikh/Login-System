@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="Assets/img/favicon.ico">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Saira+Condensed:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <!-- Font Awsome Library -->
+        <link rel="stylesheet" href="Css/all.min.css">
+        <!-- Bootstrap Stylesheet -->
+        <link rel="stylesheet" href="Css/bootstrap.min.css">
+        <!-- Main Stylesheet -->
+        <link rel="stylesheet" href="Css/style.home.css">
+</head>
+<body>
+    <main class="position-relative py-3">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <h6 id="userName" class="navbar-brand">Navbar</h6>
+            <div>
+                <button id="btnLogOut" class="btn btn-logout px-4 my-2 my-sm-0">Log Out</button>
+                <button id="btnDeleteAccount" class="btn btn-delete my-2 my-sm-0">Delete Account</button>
+            </div>
+        </div>
+    </nav>
+        <div class="container d-flex justify-content-center align-items-center flex-column">
+            <h1 class="py-2">Bookmarker</h1>
+            <div class="bookmark-body w-100 p-3 py-4 mt-4">
+                <h2 class="text-center mb-4 m-auto ">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="site-name">
+                    <label for="siteName" class="pb-2 fw-semibold">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i>
+                        Site Name
+                    </label>
+                    <input type="text" class="form-control mb-3" id="siteName" name="siteName" placeholder="Site Name">
+                </div>
+                <div class="site-url">
+                    <label for="siteUrl" class="pb-2 fw-semibold">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        Site URL
+                    </label>
+                    <input type="url" class="form-control mb-3" id="siteUrl" name="siteUrl" placeholder="Website URL">
+                </div>
+                <div class="buttons d-flex justify-content-center align-items-center gap-3 mt-3">
+                    <button id="submitBtn" class="btn px-sm-5 py-sm-2 btn-submit">Submit</button>
+                    <button id="updateBtn" class="btn px-sm-5 py-sm-2 btn-update d-none">Update</button>
+                    <button id="resetBtn" class="btn px-sm-5 py-sm-2 btn-reset">Reset</button>
+                </div>
+            </div>
+            <div class="search w-100 pt-3">
+                <input type="text" class="form-control" placeholder="search..." id="searchInput">
+            </div>
+            
+                <table class="table mt-4 text-center bg-light">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Website Name</th>
+                            <th>Visit</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        
+                    </tbody>
+                </table>
+                <button id="deleteAll" class="btn btn-delete px-4 ">
+                    <i class="fa-solid fa-trash-can pe-2"></i>
+                    Delete All
+                </button>
+        </div>
+
+        <!-- warning alert -->
+        <div class="alert-box w-100 position-absolute start-0 top-0 h-100 d-flex justify-content-center align-items-center d-none">
+            <div class="box-info">
+                <div class="box-content bg-white p-4 rounded-2 shadow-lg">
+                    <header class="box-header w-100 d-flex flex-column justify-content-between align-items-center mb-2">
+                        <div class="oops mb-2">
+                            <i class="fa-solid fa-circle-exclamation text-danger fs-1"></i>
+                        </div>
+                        <p class="fw-bold">Oops...</p>
+                        <p class="m-0 pb-2 mb-2">Site Name or Url is not valid, Please follow the rules below :</p>
+                    </header>
+                    <ol class="rules list-unstyled m-0">
+                        <li>
+                            <i class="fa-regular fa-circle-right p-2"></i>
+                            Site name must contain at least 3 characters
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-circle-right p-2"></i>
+                            Site URL must be a valid one
+                        </li>
+                    </ol>
+                    <div class="d-flex justify-content-center align-items-center mt-3">
+                        <button class="btn btn-primary px-4 py-2" id="closeAlert">
+                            OK
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- success alert -->
+        <div class="box-success w-100 position-absolute start-0 top-0 h-100 d-flex justify-content-center align-items-center d-none">
+            <div class="box-info ">
+                <div class="success-content bg-white p-4 rounded-2 shadow-lg">
+                    <header class="box-header w-100 d-flex flex-column justify-content-between align-items-center mb-2">
+                        <div class="success mb-3">
+                        </div>
+                        <i class="fa-solid fa-check fs-1 text-center"></i>
+                        <p class="fw-bold">Well Done!</p>
+                        <p class="m-0 pb-2 mb-2">Successfully Saved The Website</p>
+                    </header>
+                </div>
+            </div>
+        </div>
+        
+        <!-- success alert when update-->
+        <div class="box-update w-100 position-absolute start-0 top-0 h-100 d-flex justify-content-center align-items-center d-none">
+            <div class="box-info">
+                <div class="update-content bg-white p-4 rounded-2 shadow-lg">
+                    <header class="box-header w-100 d-flex flex-column justify-content-between align-items-center mb-2">
+                        <div class="success mb-3">
+                        </div>
+                        <i class="fa-solid fa-check fs-1 text-center"></i>
+                        <p class="m-0 pb-2 my-2">Your work has been saved </p>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="Js/sweetalert2.all.min.js"></script>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/main.home.js"></script>
+    <script src="Js/main.js"></script>
+</body>
+</html>

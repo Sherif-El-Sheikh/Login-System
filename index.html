@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    http-equiv="Permissions-Policy"
+    content='fullscreen=(self "https://example.com" "https://another.example.com"), geolocation=*, camera=()'/>
+    <title>Log In</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="Assets/img/icons8-user-50.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awsome Library -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body >
+    <main class="d-flex justify-content-center align-items-center flex-column vh-100">
+        <div class="container card" id="main">
+            <div class="log-in">
+                <div class="form my-5 d-flex justify-content-center align-items-center flex-column">
+                    <h1 class="text-center my-4 px-1">Smart Login System</h1>
+                    <input id="signinEmail" type="email" class="form-control my-3 " placeholder="Email" name="email">
+                    <input id="signinPassword" type="password" class="form-control my-3" placeholder="Password" name="pass">
+                    <div id="logAlert" class="text-center"></div>
+                    <button id="btnLogIn" class="btn btn-system">Log In</button>
+                    <button id="btnForget" class="btn btn-forget my-3">Forget Your Password?</button>
+                </div>
+
+                <div class="toggle-container">
+                    <div class="toggle">
+                        <div class="toggle-panel toggle-right">
+                            <h1>Hello, Friend!</h1>
+                            <p>Register with your personal details to use all of site features</p>
+                            <button id="btnCreate" class="hidden btn-toggle btn btn-system">Sign Up</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    
+    <script src="Js/sweetalert2.all.min.js"></script>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/main.js"></script>
+</body>
+</html>

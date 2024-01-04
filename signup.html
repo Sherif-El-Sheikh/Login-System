@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    http-equiv="Permissions-Policy"
+    content='fullscreen=(self "https://example.com" "https://another.example.com"), geolocation=*, camera=()'/>
+    <title>Sign Up</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="Assets/img/icons8-user-50.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awsome Library -->
+    <link rel="stylesheet" href="Css/all.min.css">
+    <!-- Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body >
+    <main class="d-flex justify-content-center align-items-center flex-column vh-100">
+        <div class="container card" id="main">
+            <div class="sign-up">
+                <div class="form my-sm-4 d-flex justify-content-center align-items-center flex-column">
+                    <h1 class="text-center my-4">Create Account</h1>
+                    <span>use your email for registeration</span>
+                    <input id="signupName" type="text" class="form-control my-3 " placeholder="Name" name="username">
+                    <div id="nameAlert" class="text-center"></div>
+                    <input id="signupEmail" type="email" class="form-control my-3" placeholder="Email Address" name="reg-email">
+                    <div id="emailAlert"></div>
+                    <input id="signupPassword" type="password" class="form-control my-3" placeholder="Password" name="reg-pass">
+                    <div id="alert" class="text-center"></div>
+                    <button id="btnSignUp" class="btn btn-system">Sign Up</button>
+                    <button id="btnSearch" class="btn btn-system d-none">Search</button>
+                </div>
+
+                <div class="toggle-container">
+                    <div class="toggle">
+                        <div class="toggle-panel toggle-left">
+                            <h1>Welcome Back!</h1>
+                            <p>Enter your personal details to use all of site features</p>
+                            <button id="btnSignIn" class="hidden btn-toggle btn btn-system">Sign In</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    
+    <script src="Js/sweetalert2.all.min.js"></script>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/main.js"></script>
+</body>
+</html>
